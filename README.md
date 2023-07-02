@@ -4,10 +4,10 @@
 
 To run your app, open application.yml and customize
 
-database-to-export: public (can be postgresql)
-url: jdbc:postgresql://localhost:5432/postgres
-username: postgres
-password: postgres
+- database-to-export: public (can be postgresql)
+- url: jdbc:postgresql://localhost:5432/postgres
+- username: postgres
+- password: postgres
 
 # sql-to-jdl
 Tool to translate SQL databases to JDL format of jHipster (Created due to existing databases to be generated with jHipster and build angular-java web)
