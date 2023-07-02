@@ -19,7 +19,7 @@ logging:
 
 application:
     reserved-keywords: classpath:reserved/keywords.json
-    database-to-export: postgresql
+    database-to-export: public
     database_object_types_config: TABLES # TABLES, ViEWS, ALL
     render_entities_only: false
     assume_bidirectional: true
