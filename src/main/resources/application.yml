@@ -1,9 +1,9 @@
 spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-        username: root
-        password:
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: postgres
         hikari:
             data-source-properties:
                 cachePrepStmts: true
@@ -13,9 +13,13 @@ spring:
     flyway:
         enabled: false
 
+logging:
+    level:
+        root: DEBUG
+
 application:
     reserved-keywords: classpath:reserved/keywords.json
-    database-to-export: my_database_name
+    database-to-export: postgresql
     database_object_types_config: TABLES # TABLES, ViEWS, ALL
     render_entities_only: false
     assume_bidirectional: true
@@ -41,5 +45,5 @@ application:
         - QRTZ_SIMPROP_TRIGGERS
         - QRTZ_TRIGGERS
     export:
-        path: ./my-project-jdl.jh
+        path: ./jhipstero6p.jh
         type: jdl
